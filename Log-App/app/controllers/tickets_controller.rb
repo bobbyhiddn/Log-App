@@ -1,4 +1,11 @@
 class TicketsController < ApplicationController
+
+
+  def index
+    @tickets = Ticket.all
+    render 'tickets'
+  end
+  
   def create
     # Create a new ticket using the submitted data
     ticket = Ticket.new(params[:ticket])
